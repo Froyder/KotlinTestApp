@@ -14,14 +14,15 @@ class MainActivity : AppCompatActivity() {
 
         val textView = findViewById<TextView>(R.id.text_view)
         textView.setOnClickListener {
-            textView.setText("Text changed!")
+            textView.text = "Text changed!"
+            user = User("Critic", 37)
         }
 
         val button = findViewById<Button>(R.id.button)
         button.setOnClickListener {
-            textView.setText("Text changed with button!")
+            textView.text = "Text changed with button!"
+            println(user)
         }
-
 
     }
 }
