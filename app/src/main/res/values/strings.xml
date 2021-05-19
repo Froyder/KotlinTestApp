@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">KotlinTestApp</string>
+    <string name="push_me">Push me!</string>
+    <string name="get_users_list">Get users list</string>
+    <string name="what_s_your_name">What\'s your name?</string>
+    <string name="get_name">Get name</string>
+    <string name="set_admin_name">Set admin name</string>
+    <string name="add_new_user">Add new user</string>
+    <string name="show_list">show user list</string>
 </resources>

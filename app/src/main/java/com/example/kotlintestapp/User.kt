@@ -1,5 +1,6 @@
 package com.example.kotlintestapp
 
-data class User (val name: String,  val age: Int)
+data class User (val name: String, val status: String = "user", val age: Int = 0)
 
-    var user = User("Nerd", 35)
+    val testUser = User("Nerd", "newby", 22)
+    val admin = User ("Me", "admin", 35)
