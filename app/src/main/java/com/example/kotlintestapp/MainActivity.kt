@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         val editText = findViewById<TextView>(R.id.edit_text)
         val textView = findViewById<TextView>(R.id.list_text)
 
+        Admin.addUser(admin)
+
         val button = findViewById<Button>(R.id.button)
         button.setOnClickListener {
             textView.text = "Your name is " + editText.text
@@ -24,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         val buttonObject = findViewById<Button>(R.id.button_object)
         buttonObject.setOnClickListener {
             val name: String = editText.text.toString()
-            val newUser = admin.copy(name)
+            val newUser = testUser.copy(name)
             textView.text = "Added new user - " + newUser.name
             Admin.addUser(newUser)
         }
