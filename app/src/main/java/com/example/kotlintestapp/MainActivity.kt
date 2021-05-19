@@ -1,10 +1,11 @@
 package com.example.kotlintestapp
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n", "CutPasteId")
@@ -31,10 +32,13 @@ class MainActivity : AppCompatActivity() {
         val buttonUserList = findViewById<Button>(R.id.button_userlist)
         buttonUserList.setOnClickListener {
             textView.text = Admin.getUserList().toString()
-            println(Admin.getUserList())
+
+            val userList: MutableList<User> = Admin.getUserList()
+            for(user in userList) {
+                println("Added user: " + user.name)
+            }
         }
 
-
-
     }
+
 }
